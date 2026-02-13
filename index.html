@@ -37,4 +37,131 @@
     .confetti {
       position: absolute;
       width: 10px;
-      height: 10
+      height: 10px;
+      background-color: gold;
+      top: 0;
+      animation: confettiFall 3s forwards;
+    }
+    @keyframes confettiFall {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(600px) rotate(720deg); opacity: 0; }
+    }
+    .sparkHeart {
+      position: absolute;
+      font-size: 16px;
+      pointer-events: none;
+      animation: sparkle 1s forwards;
+    }
+    @keyframes sparkle {
+      0% { transform: scale(0.5); opacity: 1; }
+      100% { transform: scale(2); opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+<audio id="bgMusic" loop autoplay>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<div id="screen1">
+  <h1>Will you be my Valentine? 💖</h1>
+  <button class="valBtn" onclick="nextScreen()">YES 😍</button>
+  <button class="valBtn" onclick="nextScreen()">YEA 😘</button>
+</div>
+
+<div id="screen2" style="display:none;">
+  <h1>How much do you love me? 💕</h1>
+  <input type="range" id="loveSlider" min="0" max="100" value="0" oninput="updateSlider(this)">
+  <p id="loveValue">0%</p>
+  <button class="valBtn" onclick="nextScreenDate()">Next 💖</button>
+</div>
+
+<div id="screen3" style="display:none;">
+  <h1>To My Favorite Person 💖</h1>
+  <p>
+    You make my worst days feel lighter.<br>
+    Even doing nothing with you feels like everything.<br>
+    You are a beautiful soul, and I’m so lucky you’re mine.
+  </p>
+
+  <p>Pick our Valentine’s Day:</p>
+  <div id="dates">
+    <button class="valBtn" onclick="chooseDate('March 4')">March 4</button>
+    <button class="valBtn" onclick="chooseDate('March 5')">March 5</button>
+    <button class="valBtn" onclick="chooseDate('March 18')">March 18</button>
+    <button class="valBtn" onclick="chooseDate('March 19')">March 19</button>
+  </div>
+</div>
+
+<script>
+const bgMusic = document.getElementById("bgMusic");
+document.addEventListener("click", () => bgMusic.play().catch(()=>{}));
+
+function nextScreen() {
+  document.getElementById('screen1').style.display = 'none';
+  document.getElementById('screen2').style.display = 'block';
+}
+
+function updateSlider(slider) {
+  let val = parseInt(slider.value);
+  if (val >= 100) slider.value = 0;
+  document.getElementById('loveValue').innerText = slider.value + "%";
+  createSparkHearts(slider.value);
+}
+
+function nextScreenDate() {
+  document.getElementById('screen2').style.display = 'none';
+  document.getElementById('screen3').style.display = 'block';
+  startFloatingHearts();
+}
+
+function chooseDate(date) {
+  document.body.innerHTML = `
+    <h1>IT'S A DATE 💕</h1>
+    <p>We’re officially celebrating Valentine’s Day on:</p>
+    <h2>${date}</h2>
+    <p>I love you 🥰</p>
+  `;
+  document.body.appendChild(bgMusic);
+  explodeConfetti();
+}
+
+function startFloatingHearts() {
+  setInterval(() => {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerText = '💖';
+    heart.style.left = Math.random() * window.innerWidth + 'px';
+    heart.style.fontSize = (20 + Math.random()*20) + 'px';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 5000);
+  }, 500);
+}
+
+function explodeConfetti() {
+  for(let i=0;i<100;i++){
+    const confetti = document.createElement('div');
+    confetti.className = 'confetti';
+    confetti.style.left = Math.random() * window.innerWidth + 'px';
+    confetti.style.backgroundColor = `hsl(${Math.random()*360},100%,50%)`;
+    document.body.appendChild(confetti);
+    setTimeout(() => confetti.remove(), 3000);
+  }
+}
+
+function createSparkHearts(value) {
+  const spark = document.createElement('div');
+  spark.className = 'sparkHeart';
+  spark.innerText = '💖';
+  spark.style.left = (window.innerWidth/2 + (Math.random()-0.5)*200) + 'px';
+  spark.style.top = (window.innerHeight/2 + (Math.random()-0.5)*50) + 'px';
+  spark.style.color = `hsl(${value*3.6},100%,50%)`;
+  document.body.appendChild(spark);
+  setTimeout(() => spark.remove(), 1000);
+}
+</script>
+
+</body>
+</html>
