@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;My Valentine&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #ffd6e8;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-top: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow-x: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1 { font-size: 2.3em; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h2 { margin-top: 10px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>p { font-size: 18px; max-width: 600px; margin: 10px auto; line-height: 1.5em; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 12px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.valBtn { background: hotpink; color: white; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#loveSlider { width: 80%; margin-top: 20px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.heart {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation: float 5s linear infinite;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes float {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>0% { transform: translateY(0px) scale(1); opacity: 1; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>100% { transform: translateY(-700px) scale(1.5); opacity: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.confetti {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: gold;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation: confettiFall 3s forwards;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes confettiFall {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>0% { transform: translateY(0px) rotate(0deg); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>100% { transform: translateY(600px) rotate(720deg); opacity: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sparkHeart {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation: sparkle 1s forwards;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes sparkle {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>0% { transform: scale(0.5); opacity: 1; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>100% { transform: scale(2); opacity: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- Background Music --&gt;</p>
+<p class="p1">&lt;audio id="bgMusic" loop autoplay&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;source src="song.mp3" type="audio/mpeg"&gt;</p>
+<p class="p1">&lt;/audio&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- Screen 1: Valentine Question --&gt;</p>
+<p class="p1">&lt;div id="screen1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Will you be my Valentine? 💖&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="valBtn" onclick="nextScreen()"&gt;YES 😍&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="valBtn" onclick="nextScreen()"&gt;YEA 😘&lt;/button&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- Screen 2: How much do you love me --&gt;</p>
+<p class="p1">&lt;div id="screen2" style="display:none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;How much do you love me? 💕&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;input type="range" id="loveSlider" min="0" max="100" value="0" oninput="updateSlider(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p id="loveValue"&gt;0%&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="valBtn" onclick="nextScreenDate()"&gt;Next 💖&lt;/button&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- Screen 3: Date Picker + Message --&gt;</p>
+<p class="p1">&lt;div id="screen3" style="display:none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;To My Favorite Person 💖&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>You make my worst days feel lighter.&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Even doing nothing with you feels like everything.&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>You are a beautiful soul, and I’m so lucky you’re mine.</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Pick our Valentine’s Day:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="dates"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="valBtn" onclick="chooseDate('March 4')"&gt;March 4&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="valBtn" onclick="chooseDate('March 5')"&gt;March 5&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="valBtn" onclick="chooseDate('March 18')"&gt;March 18&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="valBtn" onclick="chooseDate('March 19')"&gt;March 19&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">const bgMusic = document.getElementById("bgMusic");</p>
+<p class="p2"><br></p>
+<p class="p1">// Ensure music plays on click (for mobile)</p>
+<p class="p1">function ensureMusic() { bgMusic.play().catch(() =&gt; {}); }</p>
+<p class="p1">document.addEventListener("click", ensureMusic);</p>
+<p class="p2"><br></p>
+<p class="p1">// Screen navigation</p>
+<p class="p1">function nextScreen() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('screen1').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('screen2').style.display = 'block';</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function updateSlider(slider) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>let val = parseInt(slider.value);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (val &gt;= 100) slider.value = 0; // infinite slider</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('loveValue').innerText = slider.value + "%";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>createSparkHearts(slider.value);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function nextScreenDate() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('screen2').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('screen3').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>startFloatingHearts();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// Date selection with confetti</p>
+<p class="p1">function chooseDate(date) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.body.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;IT'S A DATE 💕&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;We’re officially celebrating Valentine’s Day on:&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;${date}&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;I love you 🥰&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.body.appendChild(bgMusic);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>explodeConfetti();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// Floating hearts in background</p>
+<p class="p1">function startFloatingHearts() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>setInterval(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const heart = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>heart.className = 'heart';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>heart.innerText = '💖';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>heart.style.left = Math.random() * window.innerWidth + 'px';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>heart.style.fontSize = (20 + Math.random()*20) + 'px';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.body.appendChild(heart);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>setTimeout(() =&gt; heart.remove(), 5000);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}, 500);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// Confetti explosion</p>
+<p class="p1">function explodeConfetti() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>for(let i=0; i&lt;100; i++){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const confetti = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>confetti.className = 'confetti';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>confetti.style.left = Math.random() * window.innerWidth + 'px';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>confetti.style.backgroundColor = `hsl(${Math.random()*360}, 100%, 50%)`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.body.appendChild(confetti);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>setTimeout(() =&gt; confetti.remove(), 3000);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// Slider sparkling hearts</p>
+<p class="p1">function createSparkHearts(value) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const spark = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>spark.className = 'sparkHeart';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>spark.innerText = '💖';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>spark.style.left = (window.innerWidth/2 + (Math.random()-0.5)*200) + 'px';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>spark.style.top = (window.innerHeight/2 + (Math.random()-0.5)*50) + 'px';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>spark.style.color = `hsl(${value*3.6}, 100%, 50%)`; // changes color with slider</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.body.appendChild(spark);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>setTimeout(() =&gt; spark.remove(), 1000);</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
